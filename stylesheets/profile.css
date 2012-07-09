@@ -1,0 +1,10 @@
+
+form#editableForm.uneditable > input {
+  display: none;
+}
+
+form#editableForm.editable > span, form#editableForm.editable > button {
+  display: none;
+}
+
+

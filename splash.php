@@ -10,7 +10,7 @@
 
 
 <body>
-<h2>Welcome to Thing</h2>
+<h2>Welcome </h2>
 
 <p>This is a thing we do.</p>
 

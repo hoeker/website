@@ -6,6 +6,8 @@ function profileInit() {
 
   var editButton = document.getElementById("editButton");
   editButton.addEventListener("click", enableEditing);
+
+  new Validator(document.forms["profile"]);
 }
 
 function enableEditing() {

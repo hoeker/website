@@ -1,0 +1,25 @@
+
+/* Alerts */
+
+div#alerts {
+  text-align: center;
+}
+
+div#alerts ul {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left; 0px;
+}
+
+/* Relevant games */
+
+div#gamelist ul {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left; 0px;
+}
+
+div.gamebox {
+
+}
+

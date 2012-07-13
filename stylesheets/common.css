@@ -1,0 +1,40 @@
+
+body {
+  text-align: center;
+}
+
+h2, h3, h4 {
+  color: dimgray;
+}
+
+/* Navigation */
+
+nav li {
+  display: inline;
+  margin: 5px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: blue;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+nav li a:visited {
+  color: blue;
+}
+
+nav li a:active {
+  color: darkblue;
+}
+
+/*
+input[type="text"], input[type="email"], input[type="password"] {
+  border-radius: 2px;
+  border 1px black solid;
+}
+*/
+

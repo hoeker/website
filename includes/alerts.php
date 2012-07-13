@@ -4,7 +4,7 @@
 
 ?>
 
-<div class="alerts">
+<div id="alerts">
 <h3>Alerts</h3>
 <ul>
 <li>Alert 1 <a href="#">Dismiss</a></li>

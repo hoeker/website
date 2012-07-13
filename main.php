@@ -6,6 +6,7 @@
 
 <script type="text/javascript" src="scripts/common.js"></script>
 <link rel="stylesheet" href="stylesheets/common.css" type="text/css" />
+<link rel="stylesheet" href="stylesheets/main.css" type="text/css" />
 
 </head>
 

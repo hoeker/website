@@ -4,7 +4,7 @@
 
 ?>
 
-<div class="gamelist">
+<div id="gamelist">
 <h3>Relevant Games</h3>
 
 <ul>

@@ -2,7 +2,7 @@
 <div class="gamepost">
 
 <div class="postdetails">
-<span class="postauthor"><a href="profile.php?user=124">Joe Poster</a></span>
+<span class="postauthor"><a href="profile.php?userid=124">Joe Poster</a></span>
 <span class="postdate">Thursday</span>
 </div>
 

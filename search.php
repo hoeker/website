@@ -22,8 +22,8 @@ include 'includes/nav.php';
 <div class="search">
 <form name="query" action="search.php" method="get">
 Sport: <input type="text" name="sport" placeholder="Sport" /><br/>
-From: <input type="date" name="start" /><br/>
-To: <input type="date" name="end" /><br/>
+From: <input type="date" name="start" placeholder="Start date" /><br/>
+To: <input type="date" name="end" placeholder="End date" /><br/>
 Location: <input type="text" name="location" placeholder="Location" /><br/>
 <input type="submit" value="Search" />
 </form>

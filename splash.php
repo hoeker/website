@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Splash Page</title>
+<title>PickUp</title>
 
 <script type="text/javascript" src="scripts/common.js"></script>
 <script type="text/javascript" src="scripts/validation.js"></script>
@@ -13,11 +13,14 @@
 
 
 <body>
-<h2>Welcome to Thing</h2>
+<h2>Welcome to PickUp</h2>
 
 <div id="about">
 <h4>About Us</h4>
-This is a thing we do.  It's a pretty cool thing.  I like it.  I think it's wicked.
+<p>Ever wanted to play a pick-up hockey game but couldn't find one nearby?</p>
+<p>Ever tried to play soccer with two friends, wishing you had a few more people to play with?</p>
+<p>Ever watched a basketball court sit empty when people could be playing on it?</p>
+<p>Join now!</p>
 </div>
 
 <div id="login">

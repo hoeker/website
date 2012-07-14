@@ -117,6 +117,6 @@ Validator.prototype.validateTime = function(el) {
 }
 
 Validator.prototype.validatePhone = function(el) {
-  return Boolean(el.value.match(/^\(?\d{3})?-?\d{3}-?\d{4}$/));
+  return Boolean(el.value.match(/^\(?\d{3}\)?-?\d{3}-?\d{4}$/));
 }
 

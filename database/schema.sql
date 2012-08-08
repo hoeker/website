@@ -1,4 +1,3 @@
-
 CREATE TABLE WebUser (
   userID SERIAL PRIMARY KEY,
   userName text UNIQUE,
@@ -12,18 +11,28 @@ CREATE TABLE WebUser (
   admin boolean DEFAULT false
 );
 
+CREATE TABLE Sport (
+  sportID SERIAL PRIMARY KEY,
+  sportName text
+);
+
 CREATE TABLE Position (
-  userID int REFERENCES WebUser (userID) ON DELETE Cascade,
-  sport text,
-  position text,
+  positionID SERIAL PRIMARY KEY,
+  sportID int REFERENCES Sport (sportID) ON DELETE CASCADE,
+  positionName text
+);
+
+CREATE TABLE Plays (
+  userID int REFERENCES WebUser (userID) ON DELETE CASCADE,
+  positionID int REFERENCES Position (positionID) ON DELETE CASCADE,
   skillLevel int,
-  PRIMARY KEY (userID, sport, position)
+  PRIMARY KEY (userID, positionID)
 );
 
 CREATE TABLE Rating (
-  userID int REFERENCES WebUser (userID) ON DELETE Cascade,
-  ratedBy int REFERENCES WebUser (userID) ON DELETE Cascade,
-  rating int,
+  userID int REFERENCES WebUser (userID) ON DELETE CASCADE,
+  ratedBy int REFERENCES WebUser (userID) ON DELETE CASCADE,
+  rating int NOT NULL DEFAULT 0,
   PRIMARY KEY (userID, ratedBy)
 );
 
@@ -37,23 +46,40 @@ CREATE TABLE Friend (
 CREATE TABLE Game (
   gameID SERIAL PRIMARY KEY,
   organiserID int REFERENCES WebUser (userID) ON DELETE SET NULL,
-  sport text NOT NULL,
+  sportID int REFERENCES Sport (sportID) ON DELETE SET NULL,
   location text,
   date date,
   time time,
-  openGame boolean DEFAULT true
+  privacy text CHECK (privacy IN ('private', 'invite', 'public')),
+  description text
 );
 
 CREATE TABLE Joined (
   userID int REFERENCES WebUser (userID) ON DELETE CASCADE,
-  gameID int REFERENCES WebUser (userID) ON DELETE CASCADE,
-  confirmed boolean NOT NULL
+  gameID int REFERENCES Game (gameID) ON DELETE CASCADE,
+  confirmed boolean NOT NULL DEFAULT false
 );
 
 CREATE TABLE Comment (
   commentID SERIAL PRIMARY KEY,
   gameID int REFERENCES Game (gameID) ON DELETE CASCADE,
+  userID int REFERENCES WebUser (userID) ON DELETE SET NULL,
   postTime timestamp NOT NULL,
   commentText text NOT NULL
 );
 
+
+-- Types
+
+CREATE TYPE searchCriteria AS (
+  sportID int,
+  startDate date,
+  endDate date,
+  location text
+);
+
+CREATE TYPE searchResult AS (
+  gameID int,
+  resultRank bigint,
+  totalResults bigint
+);

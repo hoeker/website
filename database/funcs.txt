@@ -1,0 +1,37 @@
+comment.php:function commentGame($gameId, $commentText) {
+comment.php:function deleteCommentGame($commentId) {
+comment.php:function getComments($gameId) {
+dbinterface.php:function connectDB() {
+dbinterface.php:function closeDB($conn) {
+dbinterface.php:function executeSQL($conn, $sql, $parameters) {
+dbinterface.php:function getResultCount($result) {
+dbinterface.php:function getUpdateCount($result) {
+dbinterface.php:function nextRow($result) {
+dbinterface.php:function error($str) {
+friends.php:function getFriends($userId) {
+friends.php:function makeFriends($userId1, $userId2) {
+friends.php:function getRating($userId, $raterId) {
+friends.php:function areFriends($userId1, $userId2) {
+friends.php:function unFriend($userId1, $userId2) {
+friends.php:function ratePlayer($userId, $rating) {
+friends.php:function clearRating($userId, $raterId) {
+game.php:function createGame($sportId, $date, $time, $location, $privacy) {
+game.php:function joinGame($gameId) {
+game.php:function leaveGame($gameId) {
+game.php:function getGameInfo($gameId) {
+game.php:function setGameInfo($gameId, $info) {
+game.php:function deleteGame($gameId) {
+game.php:function cancelGame($gameId) {
+game.php:function getParticipants($gameId, $confirmed = null) {
+game.php:function hasJoined($userId, $gameId) {
+game.php:function getOrganizer($gameId) {
+game.php:function getGameDescription($gameId) {
+game.php:function isOrganizer($userId, $gameId) {
+profile.php:function getProfile($viewUserId) {
+profile.php:function updateProfile($data) {
+profile.php:function getUserName($userId) {
+search.php:function search($criteria, $numResults, $offset) {
+search.php:function suggestGames($numGames) {
+session.php:function login($username, $password) {
+session.php:function signup($username, $password, $email) {
+session.php:function changePassword($oldPassword, $newPassword) {
